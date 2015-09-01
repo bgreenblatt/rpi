@@ -1,0 +1,27 @@
+<html>
+        <head>
+                <title>{{ name }}</title>
+                <style>
+                        table, th, td {
+                                border: 2px solid black;
+                                border-spacing: 5px;
+                                background-color: LightYellow;
+                        }
+                        select, option { width: __; }
+                </style>
+        </head>
+        <body>
+        <form action={{ actionname }} method=POST>
+        <p>Choose a team to see details</p>
+    <select name="team">
+                        {% for item in items %}
+                                <option>{{ item.team }}</option>
+                        {% endfor %}
+    </select>
+    <br><input type="submit" value="Submit"><br>
+    </form>
+    <p>
+        Or click <a href="rpi">here</a> to see all the RPIs
+    </p>
+        </body>
+</html>
