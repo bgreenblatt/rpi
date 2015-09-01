@@ -1,0 +1,36 @@
+<html>
+        <head>
+                <title>Team Details for {{ team }}</title>
+                <style>
+                        table, th, td {
+                                border: 2px solid black;
+                                border-spacing: 5px;
+                                background-color: LightYellow;
+                        }
+                </style>
+        </head>
+        <body>
+            <p>
+                Team is {{ team }}, RPI is {{ rpi }}
+            </p>
+                <table style="width:80%">
+                        <caption>{{ name }}</caption>
+                        <tr>
+                                <th width = "30%">Opponent</th>
+                                <th width = "15%">Date</th>
+                                <th width = "20%">Team Score</th>
+                                <th width = "20%">Opponent Score</th>
+                                <th width = "15%">Team Result</th>
+                        </tr>
+                        {% for item in items %}
+                        <tr>
+                                <td>{{ item.team }}</td>
+                                <td>{{ item.date }}</td>
+                                <td>{{ item.tscore }}</td>
+                                <td>{{ item.oscore }}</td>
+                                <td>{{ item.result }}</td>
+                        </tr>
+                        {% endfor %}
+                </table>
+        </body>
+</html>
