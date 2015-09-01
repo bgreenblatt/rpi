@@ -1,0 +1,30 @@
+<html>
+        <head>
+                <title>{{ name }}</title>
+                <style>
+                        table, th, td {
+                                border: 2px solid black;
+                                border-spacing: 5px;
+                                background-color: LightYellow;
+                        }
+                </style>
+        </head>
+        <body>
+                <table style="width:80%">
+                        <caption>{{ name }}</caption>
+                        <tr>
+                                <th width = "20%">Team Rank</th>
+                                <th width = "50%">Team Name</th>
+                                <th width = "30%">RPI Score</th>
+                        </tr>
+                        {% for item in items %}
+                        <tr>
+                                <td>{{ item.rank }}</td>
+                                <td>{{ item.team }}</td>
+                                <td>{{ item.rpi }}</td>
+                        </tr>
+                        {% endfor %}
+                </table>
+        </body>
+</html>
+
